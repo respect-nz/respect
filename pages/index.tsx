@@ -1,39 +1,12 @@
-import type { GetStaticProps, NextPage } from 'next'
+import type { NextPage } from 'next'
 import Head from 'next/head'
 import Image from 'next/image'
 import { attributes, react as HomeContent } from '../content/home.md'
 
 import styles from '../styles/Home.module.css'
-import { Cat } from '../types/cats'
+import { Cat } from '../types/cms'
 
-type Props = {
-    user: User
-}
-
-type User = {
-    id: number
-    email: string
-    first_name: string
-    last_name: string
-    avatar: string
-}
-
-export const getStaticProps: GetStaticProps<Props> = async () => {
-    const res = await fetch('https://reqres.in/api/users/2')
-    const user: User = await res.json()
-
-    if (!user) {
-        return {
-            notFound: true,
-        }
-    }
-
-    return {
-        props: { user },
-    }
-}
-
-const Home: NextPage<Props> = ({ user }) => {
+const Home: NextPage = () => {
     const { title, cats } = attributes
     return (
         <div className={styles.container}>
