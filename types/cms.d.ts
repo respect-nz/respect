@@ -10,5 +10,5 @@ export type ServiceProvider = {
     email: string,
     website: string,
     offeredServices: string,
-    category: Array<Category>,
+    // category: Array<Category>,
 }

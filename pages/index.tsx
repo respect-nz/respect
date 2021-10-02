@@ -7,7 +7,7 @@ import styles from '../styles/Home.module.css'
 import { ServiceProvider } from '../types/cms'
 
 const Home: NextPage = () => {
-    const { title, providers } = attributes
+    const { title, date, providers } = attributes
     return (
         <div className={styles.container}>
             <Head>
@@ -20,16 +20,13 @@ const Home: NextPage = () => {
                 <article>
                     <h1>{title}</h1>
                     <HomeContent />
+                    <p>{{ date }}</p>
                     <ul>
                         {(providers as Array<ServiceProvider>).map((p, k) => (
                             <li key={k}>
                                 <h2>{p.name}</h2>
                                 <p>{p.description}</p>
-                                <p>Address: {p.address}</p>
-                                <p>Phone: {p.phone}</p>
-                                <p>Email: {p.email}</p>
-                                <p>Website: {p.website}</p>
-                                <p>{p.offeredServices}</p>
+                                {p.address && <p>{p.address}</p>}
                             </li>
                         ))}
                     </ul>
