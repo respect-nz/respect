@@ -23,7 +23,7 @@ collections:
             multiple: true, min: 1 }
   - name: "providers"
     label: "Service Providers"
-    folder: "_providers"
+    folder: "content/_providers"
     create: true
     identifier_field: name # this will be used instead of "title" for creating new entry slug
     fields:
