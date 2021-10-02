@@ -18,7 +18,7 @@ collections:
         - { label: "Service Providers", name: "providers",
             widget: "relation", collection: "providers",
             search_fields: [ "name", "email" ],
-            value_field: ["name", "description", "address",]
+            value_field: "name",
             display_fields: [ "name", "description" ],
             multiple: true, min: 1 }
   - name: "providers"
