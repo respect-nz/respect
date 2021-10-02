@@ -20,7 +20,7 @@ const Home: NextPage = () => {
                 <article>
                     <h1>{title}</h1>
                     <HomeContent />
-                    <p>{{ date }}</p>
+                    <p>{date}</p>
                     <ul>
                         {(providers as Array<ServiceProvider>).map((p, k) => (
                             <li key={k}>
