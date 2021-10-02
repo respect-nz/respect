@@ -16,13 +16,14 @@ collections:
         - { label: "Body", name: "body", widget: "markdown"}
         - label: 'Service Providers'
           name: "providers"
-          widget: list
+          collapsed: false
+          widget: "list"
           fields:
             - { label: "Name", name: "name", widget: "string"}
-            - { label: "Organisation Type", name: "organisationType", widget: "text"}
-            - { label: "Address", name: "address", widget: "map" }
-            - { label: "Phone", name: "phone", widget: "number" }
-            - { label: "Email", name: "email", widget: "string" }
+            - { label: "Description", name: "description", widget: "text"}
+            - { label: "Address", name: "address", widget: "map", required: false }
+            - { label: "Phone", name: "phone", widget: "number", required: false }
+            - { label: "Email", name: "email", widget: "string", required: false }
             - { label: "Website", name: "website", widget: "string" }
             - { label: "Services", name: "offeredServices", widget: "text" }
             - { label: "Category", name: "category", widget: "list" }

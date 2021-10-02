@@ -24,7 +24,7 @@ const Home: NextPage = () => {
                         {(providers as Array<ServiceProvider>).map((p, k) => (
                             <li key={k}>
                                 <h2>{p.name}</h2>
-                                <p>{p.organisationType}</p>
+                                <p>{p.description}</p>
                                 <p>Address: {p.address}</p>
                                 <p>Phone: {p.phone}</p>
                                 <p>Email: {p.email}</p>

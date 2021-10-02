@@ -3,7 +3,7 @@ export type Category = {
 }
 
 export type ServiceProvider = {
-    organisationType: string,
+    description: string,
     name: string,
     address: string,
     phone: number,
