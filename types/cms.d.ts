@@ -1,5 +1,7 @@
 export type Category = {
-    categoryName: string
+    name: string
+    description: string
+    providers: Array<ServiceProvider>
 }
 
 export type ServiceProvider = {
@@ -10,5 +12,4 @@ export type ServiceProvider = {
     email: string,
     website: string,
     offeredServices: string,
-    // category: Array<Category>,
 }
