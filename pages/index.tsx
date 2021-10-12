@@ -1,13 +1,17 @@
 import type { NextPage } from 'next'
 import Head from 'next/head'
-import Image from 'next/image'
+
 import { attributes, react as HomeContent } from '../content/home.md'
 
 import styles from '../styles/Home.module.css'
-import { ServiceProvider } from '../types/cms'
+
+import { Category } from '../types/cms'
+
+import { Categories } from '../components/categories'
 
 const Home: NextPage = () => {
-    const { title, date, providers } = attributes
+    const { title, categories } = attributes as { title: string; categories: Array<Category> }
+
     return (
         <div className={styles.container}>
             <Head>
@@ -17,20 +21,12 @@ const Home: NextPage = () => {
             </Head>
 
             <main className={styles.main}>
-                <article>
+                <div>
                     <h1>{title}</h1>
                     <HomeContent />
-                    <p>{date}</p>
-                    <ul>
-                        {(providers as Array<ServiceProvider>).map((p, k) => (
-                            <li key={k}>
-                                <h2>{p.name}</h2>
-                                <p>{p.description}</p>
-                                {p.address && <p>{p.address}</p>}
-                            </li>
-                        ))}
-                    </ul>
-                </article>
+                    Our services:
+                    <Categories categories={categories} />
+                </div>
             </main>
 
             <footer className={styles.footer}></footer>
