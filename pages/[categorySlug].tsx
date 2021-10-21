@@ -1,7 +1,7 @@
 import type { GetStaticPaths, GetStaticProps, NextPage } from 'next'
 import Head from 'next/head'
 
-import styles from '../styles/Home.module.css'
+import styles from '../styles/pages/Home.module.scss'
 import { categoryNameToSlug } from '../utils'
 import { attributes } from '../content/home.md'
 

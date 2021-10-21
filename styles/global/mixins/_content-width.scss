@@ -1,0 +1,11 @@
+// Container that handles its own gutters and padding while respecting the max width you give it
+// From https://twitter.com/hexagoncircle/status/1276968610368352258
+
+@mixin content-width {
+    width: 100%;
+    margin-right: auto;
+    margin-left: auto;
+    padding-right: var(--page-gutter);
+    padding-left: var(--page-gutter);
+    max-width: calc(var(--content-max-width-standard) + var(--page-gutter) * 2);
+}
