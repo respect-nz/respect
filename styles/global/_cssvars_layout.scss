@@ -1,0 +1,26 @@
+// =============================================================================
+// Custom properties (variables) the standard grid, gaps and page gutters.
+// Mainly used by the layout utility classes, and also to make things full-bleed
+// or have things be offset by a standard gap's width to align with a gap instead
+// of a column (edge case, but sometimes needed).
+// =============================================================================
+
+:root {
+    --standard-cols: 12;
+    --standard-gap: #{rem(12)};
+    --page-gutter: #{rem(16)};
+    --content-max-width-standard: #{rem(1512)};
+    --footer-space: #{rem(88)};
+    --sticky-nav-height: #{rem(56)};
+
+    @include sm {
+        --standard-gap: #{rem(16)};
+        --page-gutter: #{rem(24)};
+    }
+    @include lg {
+        --page-gutter: #{rem(48)};
+    }
+    @include xl {
+        --standard-gap: #{rem(24)};
+    }
+}

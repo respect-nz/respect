@@ -1,0 +1,21 @@
+// =============================================================================
+// Functions
+// =============================================================================
+
+@function strip-unit($number) {
+    @if type-of($number) == 'number' and not unitless($number) {
+        @return $number / ($number * 0 + 1);
+    }
+
+    @return $number;
+}
+// Convert pixels to rems
+@function rem($size) {
+    $rem-size: strip-unit($size) / strip-unit(16);
+    @return #{$rem-size}rem;
+}
+
+// Convert pixels to ems (USE FOR BREAKPOINTS ONLY)
+@function em($size) {
+    @return $size / 16px * 1em;
+}
