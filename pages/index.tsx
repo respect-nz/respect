@@ -20,12 +20,10 @@ const Home: NextPage = () => {
                 <link rel="icon" href="/favicon.ico" />
             </Head>
 
-            <main className="u-content-width rich-text">
-                <h1>{title}</h1>
-                <HomeContent />
-                <p>Our services:</p>
-                <Categories categories={categories} />
-            </main>
+            <h1>{title}</h1>
+            <HomeContent />
+            <p>Our services:</p>
+            <Categories categories={categories} />
         </>
     )
 }
