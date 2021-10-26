@@ -1,12 +1,7 @@
 import type { NextPage } from 'next'
 import Head from 'next/head'
-
 import { attributes, react as HomeContent } from '../content/home.md'
-
-// import styles from '../styles/pages/Home.module.scss'
-
 import { Category } from '../types/cms'
-
 import { Categories } from '../components/categories'
 
 const Home: NextPage = () => {
@@ -20,7 +15,7 @@ const Home: NextPage = () => {
                 <link rel="icon" href="/favicon.ico" />
             </Head>
 
-            <main className="u-content-width rich-text">
+            <main className="prose">
                 <h1>{title}</h1>
                 <HomeContent />
                 <p>Our services:</p>
