@@ -2,3 +2,18 @@
 @tailwind base;
 @tailwind components;
 @tailwind utilities;
+
+/* 
+    NextJs has this wrapper we can't access/modify.
+    So we need to style it by ID. 
+*/
+#__next {
+    height: 100%;
+    min-height: 100vh;
+    display: flex;
+    flex-direction: column;
+}
+html,
+body {
+    min-height: 100%;
+}
